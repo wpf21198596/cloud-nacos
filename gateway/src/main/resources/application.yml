@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: neo_route
+          uri: http://www.ityouknow.com
+          predicates:
+            - Path=/spring-cloud
+#  application:
+#    name: gateway
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
+#          filters:
+#            - StripPrefix=1
+
+
+server:
+  port: 8080
+
