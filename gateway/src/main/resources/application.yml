@@ -9,6 +9,15 @@ spring:
         uri: lb://center
         predicates:
         - Path=/cc/**
+        filters:
+        - StripPrefix=1
+
+      - feign:
+        uri: lb://feign
+        predicates:
+        - Path=/feign/**
+        filters:
+        - StripPrefix=1
   application:
     name: gateway
 
@@ -18,8 +27,6 @@ spring:
       locator:
         enabled: true
         lower-case-service-id: true
-        filters:
-          - StripPrefix=1
 
 
 
