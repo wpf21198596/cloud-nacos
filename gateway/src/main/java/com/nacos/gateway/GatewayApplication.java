@@ -1,17 +1,8 @@
 package com.nacos.gateway;
 
-import lombok.Data;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
 
 @EnableDiscoveryClient
 @SpringBootApplication
@@ -21,13 +12,13 @@ public class GatewayApplication {
         SpringApplication.run(GatewayApplication.class, args);
     }
 
-    @RestController
-    class test{
-        @RequestMapping("/aaa")
-        public String aaa(){
-            return "aaa";
-        }
-    }
+//    @RestController
+//    class test{
+//        @RequestMapping("/aaa")
+//        public String aaa(){
+//            return "aaa";
+//        }
+//    }
 
 
 //    @Data
